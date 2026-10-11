@@ -1,0 +1,1261 @@
+{
+  "schema_version": 1,
+  "dataset_description": "Synthetic documentation and manually authored labels for demonstration; not a production benchmark. No tuning/test split.",
+  "k": 3,
+  "corpus_sha256": "97f14b44ba7f69d8b554d615aa8e9100a8293ac91a68f7f316143df5c605031c",
+  "questions_sha256": "bf0d73a5a3179a499e281d053cd69370be190ba526dcc01f1e96c6b1a31a4529",
+  "passage_count": 20,
+  "question_count": 16,
+  "warnings": [],
+  "methods": {
+    "tfidf": {
+      "summary": {
+        "recall_at_k": 0.8125,
+        "mrr_at_k": 0.625,
+        "hit_rate_at_k": 0.8125
+      },
+      "timing": {
+        "load_ms": 0,
+        "index_ms": 1.7256219999808309,
+        "warmup_ms": 0.36549800006469013,
+        "query_ms_median": 0.23820549995434703,
+        "query_ms_p95": 0.33261774996162785
+      },
+      "metadata": {
+        "ngram_range": [
+          1,
+          2
+        ],
+        "max_features": 20000,
+        "fitted_on": "corpus only"
+      },
+      "queries": [
+        {
+          "id": "q01",
+          "question": "How long is a password reset link valid?",
+          "relevant_passage_ids": [
+            "accounts.md#p001"
+          ],
+          "results": [
+            {
+              "passage_id": "accounts.md#p001",
+              "document": "accounts.md",
+              "text": "Password reset links expire after fifteen minutes. Request a fresh email if the old link no longer works.",
+              "score": 0.2977325197138013,
+              "rank": 1
+            },
+            {
+              "passage_id": "accounts.md#p003",
+              "document": "accounts.md",
+              "text": "An administrator can invite teammates from Settings, Members. Invitations remain valid for seven days.",
+              "score": 0.08569900036399715,
+              "rank": 2
+            },
+            {
+              "passage_id": "data.md#p002",
+              "document": "data.md",
+              "text": "CSV imports must use UTF-8 encoding and a header row. File size is limited to ten megabytes.",
+              "score": 0.05983543982438311,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 0.33111799996277114,
+          "query_truncated": false
+        },
+        {
+          "id": "q02",
+          "question": "I lost my authentication device. How can I get back in?",
+          "relevant_passage_ids": [
+            "accounts.md#p002"
+          ],
+          "results": [
+            {
+              "passage_id": "data.md#p003",
+              "document": "data.md",
+              "text": "Deleted documents stay in the trash for thirty days and can be restored by a workspace administrator.",
+              "score": 0.12938127095387925,
+              "rank": 1
+            },
+            {
+              "passage_id": "accounts.md#p002",
+              "document": "accounts.md",
+              "text": "Account recovery after losing a phone requires one of your saved backup codes. Support cannot bypass two-factor authentication.",
+              "score": 0.1262736665333641,
+              "rank": 2
+            },
+            {
+              "passage_id": "developer.md#p003",
+              "document": "developer.md",
+              "text": "API tokens can be revoked in developer settings. Revocation takes effect immediately; rotate credentials without committing secrets to source control.",
+              "score": 0.1087047896082883,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 0.5,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 0.2682250000134445,
+          "query_truncated": false
+        },
+        {
+          "id": "q03",
+          "question": "Can I retrieve a document I accidentally removed?",
+          "relevant_passage_ids": [
+            "data.md#p003"
+          ],
+          "results": [
+            {
+              "passage_id": "workspace.md#p003",
+              "document": "workspace.md",
+              "text": "Search finds words in document titles and body text. It does not search text embedded inside uploaded images.",
+              "score": 0.13923493924717112,
+              "rank": 1
+            },
+            {
+              "passage_id": "accounts.md#p003",
+              "document": "accounts.md",
+              "text": "An administrator can invite teammates from Settings, Members. Invitations remain valid for seven days.",
+              "score": 0.07721283731108172,
+              "rank": 2
+            },
+            {
+              "passage_id": "data.md#p003",
+              "document": "data.md",
+              "text": "Deleted documents stay in the trash for thirty days and can be restored by a workspace administrator.",
+              "score": 0.07407625684956827,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 0.3333333333333333,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 0.24208599995745317,
+          "query_truncated": false
+        },
+        {
+          "id": "q04",
+          "question": "How do I avoid processing a webhook notification twice?",
+          "relevant_passage_ids": [
+            "developer.md#p002"
+          ],
+          "results": [
+            {
+              "passage_id": "data.md#p004",
+              "document": "data.md",
+              "text": "Automatic backups run every night. Restore a backup into a new workspace to avoid overwriting existing documents.",
+              "score": 0.1928044025457377,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 0.0,
+            "reciprocal_rank_at_k": 0.0,
+            "hit_at_k": 0,
+            "missed_relevant_ids": [
+              "developer.md#p002"
+            ]
+          },
+          "latency_ms": 0.2796020000914723,
+          "query_truncated": false
+        },
+        {
+          "id": "q05",
+          "question": "What should my client do when it is throttled?",
+          "relevant_passage_ids": [
+            "developer.md#p001"
+          ],
+          "results": [
+            {
+              "passage_id": "workspace.md#p003",
+              "document": "workspace.md",
+              "text": "Search finds words in document titles and body text. It does not search text embedded inside uploaded images.",
+              "score": 0.10075316837024509,
+              "rank": 1
+            },
+            {
+              "passage_id": "workspace.md#p002",
+              "document": "workspace.md",
+              "text": "Offline edits are saved locally and synchronized when the connection returns. Simultaneous edits to the same paragraph require manual conflict resolution.",
+              "score": 0.0969339576835649,
+              "rank": 2
+            },
+            {
+              "passage_id": "data.md#p002",
+              "document": "data.md",
+              "text": "CSV imports must use UTF-8 encoding and a header row. File size is limited to ten megabytes.",
+              "score": 0.08633717749673779,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 0.0,
+            "reciprocal_rank_at_k": 0.0,
+            "hit_at_k": 0,
+            "missed_relevant_ids": [
+              "developer.md#p001"
+            ]
+          },
+          "latency_ms": 0.23251199991136673,
+          "query_truncated": false
+        },
+        {
+          "id": "q06",
+          "question": "Does a CSV download include records beyond the first page?",
+          "relevant_passage_ids": [
+            "data.md#p001"
+          ],
+          "results": [
+            {
+              "passage_id": "data.md#p001",
+              "document": "data.md",
+              "text": "Export a table as CSV from the table menu. The download contains all filtered rows, including rows on later pages.",
+              "score": 0.17034580469040556,
+              "rank": 1
+            },
+            {
+              "passage_id": "workspace.md#p003",
+              "document": "workspace.md",
+              "text": "Search finds words in document titles and body text. It does not search text embedded inside uploaded images.",
+              "score": 0.08588794738697599,
+              "rank": 2
+            },
+            {
+              "passage_id": "developer.md#p004",
+              "document": "developer.md",
+              "text": "Pagination uses a cursor returned as next_cursor. Continue until next_cursor is null. Each page holds at most one hundred items.",
+              "score": 0.08506997452607591,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 0.23032899991903832,
+          "query_truncated": false
+        },
+        {
+          "id": "q07",
+          "question": "Which roles can invite people and download invoices?",
+          "relevant_passage_ids": [
+            "workspace.md#p001",
+            "billing.md#p001"
+          ],
+          "results": [
+            {
+              "passage_id": "billing.md#p001",
+              "document": "billing.md",
+              "text": "Invoices are available under Settings, Billing. Only workspace administrators can download invoices or change payment information.",
+              "score": 0.3256978674193728,
+              "rank": 1
+            },
+            {
+              "passage_id": "workspace.md#p001",
+              "document": "workspace.md",
+              "text": "Viewers may read and comment on documents. Editors may change content. Only administrators can invite members and manage billing.",
+              "score": 0.20121629399697288,
+              "rank": 2
+            },
+            {
+              "passage_id": "accounts.md#p003",
+              "document": "accounts.md",
+              "text": "An administrator can invite teammates from Settings, Members. Invitations remain valid for seven days.",
+              "score": 0.18185064566654324,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 0.2251909999131385,
+          "query_truncated": false
+        },
+        {
+          "id": "q08",
+          "question": "Will my changes survive losing my internet connection?",
+          "relevant_passage_ids": [
+            "workspace.md#p002"
+          ],
+          "results": [
+            {
+              "passage_id": "accounts.md#p002",
+              "document": "accounts.md",
+              "text": "Account recovery after losing a phone requires one of your saved backup codes. Support cannot bypass two-factor authentication.",
+              "score": 0.12319549168489612,
+              "rank": 1
+            },
+            {
+              "passage_id": "workspace.md#p002",
+              "document": "workspace.md",
+              "text": "Offline edits are saved locally and synchronized when the connection returns. Simultaneous edits to the same paragraph require manual conflict resolution.",
+              "score": 0.11413264311466573,
+              "rank": 2
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 0.5,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 0.2990099999351514,
+          "query_truncated": false
+        },
+        {
+          "id": "q09",
+          "question": "Which chart format stays sharp when resized?",
+          "relevant_passage_ids": [
+            "workspace.md#p004"
+          ],
+          "results": [
+            {
+              "passage_id": "workspace.md#p002",
+              "document": "workspace.md",
+              "text": "Offline edits are saved locally and synchronized when the connection returns. Simultaneous edits to the same paragraph require manual conflict resolution.",
+              "score": 0.16140793180224852,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 0.0,
+            "reciprocal_rank_at_k": 0.0,
+            "hit_at_k": 0,
+            "missed_relevant_ids": [
+              "workspace.md#p004"
+            ]
+          },
+          "latency_ms": 0.2343249999512409,
+          "query_truncated": false
+        },
+        {
+          "id": "q10",
+          "question": "How soon does revoking an API token work?",
+          "relevant_passage_ids": [
+            "developer.md#p003"
+          ],
+          "results": [
+            {
+              "passage_id": "workspace.md#p003",
+              "document": "workspace.md",
+              "text": "Search finds words in document titles and body text. It does not search text embedded inside uploaded images.",
+              "score": 0.11060802425391764,
+              "rank": 1
+            },
+            {
+              "passage_id": "developer.md#p001",
+              "document": "developer.md",
+              "text": "API clients may send sixty requests per minute. A 429 response includes a Retry-After header with the wait time in seconds.",
+              "score": 0.08529877730744599,
+              "rank": 2
+            },
+            {
+              "passage_id": "developer.md#p003",
+              "document": "developer.md",
+              "text": "API tokens can be revoked in developer settings. Revocation takes effect immediately; rotate credentials without committing secrets to source control.",
+              "score": 0.08454787508254982,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 0.3333333333333333,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 0.2261530000851053,
+          "query_truncated": false
+        },
+        {
+          "id": "q11",
+          "question": "How can I restore a backup without replacing my current work?",
+          "relevant_passage_ids": [
+            "data.md#p004"
+          ],
+          "results": [
+            {
+              "passage_id": "data.md#p004",
+              "document": "data.md",
+              "text": "Automatic backups run every night. Restore a backup into a new workspace to avoid overwriting existing documents.",
+              "score": 0.23387946843385693,
+              "rank": 1
+            },
+            {
+              "passage_id": "developer.md#p003",
+              "document": "developer.md",
+              "text": "API tokens can be revoked in developer settings. Revocation takes effect immediately; rotate credentials without committing secrets to source control.",
+              "score": 0.10542095447233463,
+              "rank": 2
+            },
+            {
+              "passage_id": "billing.md#p002",
+              "document": "billing.md",
+              "text": "Cancelling a subscription stops renewal at the end of the current billing period. Existing access continues until that date.",
+              "score": 0.077019089926386,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 0.337116999958198,
+          "query_truncated": false
+        },
+        {
+          "id": "q12",
+          "question": "Can search read words inside a screenshot?",
+          "relevant_passage_ids": [
+            "workspace.md#p003"
+          ],
+          "results": [
+            {
+              "passage_id": "workspace.md#p003",
+              "document": "workspace.md",
+              "text": "Search finds words in document titles and body text. It does not search text embedded inside uploaded images.",
+              "score": 0.2936530201580284,
+              "rank": 1
+            },
+            {
+              "passage_id": "workspace.md#p001",
+              "document": "workspace.md",
+              "text": "Viewers may read and comment on documents. Editors may change content. Only administrators can invite members and manage billing.",
+              "score": 0.12138841049874077,
+              "rank": 2
+            },
+            {
+              "passage_id": "accounts.md#p003",
+              "document": "accounts.md",
+              "text": "An administrator can invite teammates from Settings, Members. Invitations remain valid for seven days.",
+              "score": 0.04409396348584333,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 0.31202899992877065,
+          "query_truncated": false
+        },
+        {
+          "id": "q13",
+          "question": "If I cancel now, does access end immediately?",
+          "relevant_passage_ids": [
+            "billing.md#p002"
+          ],
+          "results": [
+            {
+              "passage_id": "billing.md#p002",
+              "document": "billing.md",
+              "text": "Cancelling a subscription stops renewal at the end of the current billing period. Existing access continues until that date.",
+              "score": 0.1574584893070168,
+              "rank": 1
+            },
+            {
+              "passage_id": "accounts.md#p001",
+              "document": "accounts.md",
+              "text": "Password reset links expire after fifteen minutes. Request a fresh email if the old link no longer works.",
+              "score": 0.07997782078451318,
+              "rank": 2
+            },
+            {
+              "passage_id": "workspace.md#p003",
+              "document": "workspace.md",
+              "text": "Search finds words in document titles and body text. It does not search text embedded inside uploaded images.",
+              "score": 0.07502787358900502,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 0.2312999999958265,
+          "query_truncated": false
+        },
+        {
+          "id": "q14",
+          "question": "What file encoding and size are accepted for table uploads?",
+          "relevant_passage_ids": [
+            "data.md#p002"
+          ],
+          "results": [
+            {
+              "passage_id": "data.md#p002",
+              "document": "data.md",
+              "text": "CSV imports must use UTF-8 encoding and a header row. File size is limited to ten megabytes.",
+              "score": 0.31454635145123744,
+              "rank": 1
+            },
+            {
+              "passage_id": "data.md#p001",
+              "document": "data.md",
+              "text": "Export a table as CSV from the table menu. The download contains all filtered rows, including rows on later pages.",
+              "score": 0.1094798361735724,
+              "rank": 2
+            },
+            {
+              "passage_id": "data.md#p003",
+              "document": "data.md",
+              "text": "Deleted documents stay in the trash for thirty days and can be restored by a workspace administrator.",
+              "score": 0.07479924385193379,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 0.22562200001630117,
+          "query_truncated": false
+        },
+        {
+          "id": "q15",
+          "question": "How do clients fetch the next hundred records?",
+          "relevant_passage_ids": [
+            "developer.md#p004"
+          ],
+          "results": [
+            {
+              "passage_id": "developer.md#p001",
+              "document": "developer.md",
+              "text": "API clients may send sixty requests per minute. A 429 response includes a Retry-After header with the wait time in seconds.",
+              "score": 0.1488035073912237,
+              "rank": 1
+            },
+            {
+              "passage_id": "billing.md#p003",
+              "document": "billing.md",
+              "text": "The free plan allows three members and five hundred documents per workspace. Archived documents count toward this limit.",
+              "score": 0.13135407073297017,
+              "rank": 2
+            },
+            {
+              "passage_id": "developer.md#p004",
+              "document": "developer.md",
+              "text": "Pagination uses a cursor returned as next_cursor. Continue until next_cursor is null. Each page holds at most one hundred items.",
+              "score": 0.08983153947414887,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 0.3333333333333333,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 0.2177810000603131,
+          "query_truncated": false
+        },
+        {
+          "id": "q16",
+          "question": "Do archived documents count against the free plan?",
+          "relevant_passage_ids": [
+            "billing.md#p003"
+          ],
+          "results": [
+            {
+              "passage_id": "billing.md#p003",
+              "document": "billing.md",
+              "text": "The free plan allows three members and five hundred documents per workspace. Archived documents count toward this limit.",
+              "score": 0.5507778880462404,
+              "rank": 1
+            },
+            {
+              "passage_id": "data.md#p003",
+              "document": "data.md",
+              "text": "Deleted documents stay in the trash for thirty days and can be restored by a workspace administrator.",
+              "score": 0.04829276636062676,
+              "rank": 2
+            },
+            {
+              "passage_id": "accounts.md#p004",
+              "document": "accounts.md",
+              "text": "Deleting an account permanently removes profile information after a thirty-day grace period. Workspace documents belong to the workspace.",
+              "score": 0.044509225147504314,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 0.2621469999439796,
+          "query_truncated": false
+        }
+      ]
+    },
+    "minilm": {
+      "summary": {
+        "recall_at_k": 1.0,
+        "mrr_at_k": 1.0,
+        "hit_rate_at_k": 1.0
+      },
+      "timing": {
+        "load_ms": 225.3826300000128,
+        "index_ms": 135.34925099997963,
+        "warmup_ms": 3.2858800000212796,
+        "query_ms_median": 3.0206440000029033,
+        "query_ms_p95": 6.075089999967531
+      },
+      "metadata": {
+        "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+        "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "model_file": "onnx/model.onnx",
+        "max_tokens": 256,
+        "pooling": "attention-mask mean + L2",
+        "truncated_ids": [],
+        "provider": "CPUExecutionProvider"
+      },
+      "queries": [
+        {
+          "id": "q01",
+          "question": "How long is a password reset link valid?",
+          "relevant_passage_ids": [
+            "accounts.md#p001"
+          ],
+          "results": [
+            {
+              "passage_id": "accounts.md#p001",
+              "document": "accounts.md",
+              "text": "Password reset links expire after fifteen minutes. Request a fresh email if the old link no longer works.",
+              "score": 0.7410027010486236,
+              "rank": 1
+            },
+            {
+              "passage_id": "accounts.md#p002",
+              "document": "accounts.md",
+              "text": "Account recovery after losing a phone requires one of your saved backup codes. Support cannot bypass two-factor authentication.",
+              "score": 0.36458098879824613,
+              "rank": 2
+            },
+            {
+              "passage_id": "billing.md#p002",
+              "document": "billing.md",
+              "text": "Cancelling a subscription stops renewal at the end of the current billing period. Existing access continues until that date.",
+              "score": 0.3589272708570802,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 2.9717569999547777,
+          "query_truncated": false
+        },
+        {
+          "id": "q02",
+          "question": "I lost my authentication device. How can I get back in?",
+          "relevant_passage_ids": [
+            "accounts.md#p002"
+          ],
+          "results": [
+            {
+              "passage_id": "accounts.md#p002",
+              "document": "accounts.md",
+              "text": "Account recovery after losing a phone requires one of your saved backup codes. Support cannot bypass two-factor authentication.",
+              "score": 0.5211689966992954,
+              "rank": 1
+            },
+            {
+              "passage_id": "accounts.md#p001",
+              "document": "accounts.md",
+              "text": "Password reset links expire after fifteen minutes. Request a fresh email if the old link no longer works.",
+              "score": 0.4324762464528856,
+              "rank": 2
+            },
+            {
+              "passage_id": "developer.md#p003",
+              "document": "developer.md",
+              "text": "API tokens can be revoked in developer settings. Revocation takes effect immediately; rotate credentials without committing secrets to source control.",
+              "score": 0.2190220685507388,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 3.2369680000101653,
+          "query_truncated": false
+        },
+        {
+          "id": "q03",
+          "question": "Can I retrieve a document I accidentally removed?",
+          "relevant_passage_ids": [
+            "data.md#p003"
+          ],
+          "results": [
+            {
+              "passage_id": "data.md#p003",
+              "document": "data.md",
+              "text": "Deleted documents stay in the trash for thirty days and can be restored by a workspace administrator.",
+              "score": 0.6122995763383291,
+              "rank": 1
+            },
+            {
+              "passage_id": "accounts.md#p004",
+              "document": "accounts.md",
+              "text": "Deleting an account permanently removes profile information after a thirty-day grace period. Workspace documents belong to the workspace.",
+              "score": 0.37611346567018533,
+              "rank": 2
+            },
+            {
+              "passage_id": "accounts.md#p002",
+              "document": "accounts.md",
+              "text": "Account recovery after losing a phone requires one of your saved backup codes. Support cannot bypass two-factor authentication.",
+              "score": 0.26749834926635163,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 2.852101000030416,
+          "query_truncated": false
+        },
+        {
+          "id": "q04",
+          "question": "How do I avoid processing a webhook notification twice?",
+          "relevant_passage_ids": [
+            "developer.md#p002"
+          ],
+          "results": [
+            {
+              "passage_id": "developer.md#p002",
+              "document": "developer.md",
+              "text": "Webhooks are retried after one minute, then five minutes, then thirty minutes. Use the event ID as an idempotency key.",
+              "score": 0.6372205857126997,
+              "rank": 1
+            },
+            {
+              "passage_id": "developer.md#p001",
+              "document": "developer.md",
+              "text": "API clients may send sixty requests per minute. A 429 response includes a Retry-After header with the wait time in seconds.",
+              "score": 0.3123048268545626,
+              "rank": 2
+            },
+            {
+              "passage_id": "workspace.md#p002",
+              "document": "workspace.md",
+              "text": "Offline edits are saved locally and synchronized when the connection returns. Simultaneous edits to the same paragraph require manual conflict resolution.",
+              "score": 0.21159160193523438,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 8.624741999938124,
+          "query_truncated": false
+        },
+        {
+          "id": "q05",
+          "question": "What should my client do when it is throttled?",
+          "relevant_passage_ids": [
+            "developer.md#p001"
+          ],
+          "results": [
+            {
+              "passage_id": "developer.md#p001",
+              "document": "developer.md",
+              "text": "API clients may send sixty requests per minute. A 429 response includes a Retry-After header with the wait time in seconds.",
+              "score": 0.39274458422128916,
+              "rank": 1
+            },
+            {
+              "passage_id": "billing.md#p002",
+              "document": "billing.md",
+              "text": "Cancelling a subscription stops renewal at the end of the current billing period. Existing access continues until that date.",
+              "score": 0.22875704875578462,
+              "rank": 2
+            },
+            {
+              "passage_id": "developer.md#p002",
+              "document": "developer.md",
+              "text": "Webhooks are retried after one minute, then five minutes, then thirty minutes. Use the event ID as an idempotency key.",
+              "score": 0.15763665709136404,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 3.182998000056614,
+          "query_truncated": false
+        },
+        {
+          "id": "q06",
+          "question": "Does a CSV download include records beyond the first page?",
+          "relevant_passage_ids": [
+            "data.md#p001"
+          ],
+          "results": [
+            {
+              "passage_id": "data.md#p001",
+              "document": "data.md",
+              "text": "Export a table as CSV from the table menu. The download contains all filtered rows, including rows on later pages.",
+              "score": 0.646978135948802,
+              "rank": 1
+            },
+            {
+              "passage_id": "data.md#p002",
+              "document": "data.md",
+              "text": "CSV imports must use UTF-8 encoding and a header row. File size is limited to ten megabytes.",
+              "score": 0.44950027991277414,
+              "rank": 2
+            },
+            {
+              "passage_id": "developer.md#p004",
+              "document": "developer.md",
+              "text": "Pagination uses a cursor returned as next_cursor. Continue until next_cursor is null. Each page holds at most one hundred items.",
+              "score": 0.3150398383777604,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 3.033789000028264,
+          "query_truncated": false
+        },
+        {
+          "id": "q07",
+          "question": "Which roles can invite people and download invoices?",
+          "relevant_passage_ids": [
+            "workspace.md#p001",
+            "billing.md#p001"
+          ],
+          "results": [
+            {
+              "passage_id": "billing.md#p001",
+              "document": "billing.md",
+              "text": "Invoices are available under Settings, Billing. Only workspace administrators can download invoices or change payment information.",
+              "score": 0.565990608819466,
+              "rank": 1
+            },
+            {
+              "passage_id": "workspace.md#p001",
+              "document": "workspace.md",
+              "text": "Viewers may read and comment on documents. Editors may change content. Only administrators can invite members and manage billing.",
+              "score": 0.5541601504411713,
+              "rank": 2
+            },
+            {
+              "passage_id": "accounts.md#p003",
+              "document": "accounts.md",
+              "text": "An administrator can invite teammates from Settings, Members. Invitations remain valid for seven days.",
+              "score": 0.33784315982898727,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 3.0074989999775426,
+          "query_truncated": false
+        },
+        {
+          "id": "q08",
+          "question": "Will my changes survive losing my internet connection?",
+          "relevant_passage_ids": [
+            "workspace.md#p002"
+          ],
+          "results": [
+            {
+              "passage_id": "workspace.md#p002",
+              "document": "workspace.md",
+              "text": "Offline edits are saved locally and synchronized when the connection returns. Simultaneous edits to the same paragraph require manual conflict resolution.",
+              "score": 0.37631418336019096,
+              "rank": 1
+            },
+            {
+              "passage_id": "data.md#p004",
+              "document": "data.md",
+              "text": "Automatic backups run every night. Restore a backup into a new workspace to avoid overwriting existing documents.",
+              "score": 0.2508110999213081,
+              "rank": 2
+            },
+            {
+              "passage_id": "billing.md#p002",
+              "document": "billing.md",
+              "text": "Cancelling a subscription stops renewal at the end of the current billing period. Existing access continues until that date.",
+              "score": 0.19641717724979574,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 2.9415929999458967,
+          "query_truncated": false
+        },
+        {
+          "id": "q09",
+          "question": "Which chart format stays sharp when resized?",
+          "relevant_passage_ids": [
+            "workspace.md#p004"
+          ],
+          "results": [
+            {
+              "passage_id": "workspace.md#p004",
+              "document": "workspace.md",
+              "text": "Charts support SVG and PNG downloads. Choose SVG for scalable vector graphics in presentations.",
+              "score": 0.43006102583345346,
+              "rank": 1
+            },
+            {
+              "passage_id": "data.md#p002",
+              "document": "data.md",
+              "text": "CSV imports must use UTF-8 encoding and a header row. File size is limited to ten megabytes.",
+              "score": 0.11444276600835993,
+              "rank": 2
+            },
+            {
+              "passage_id": "workspace.md#p002",
+              "document": "workspace.md",
+              "text": "Offline edits are saved locally and synchronized when the connection returns. Simultaneous edits to the same paragraph require manual conflict resolution.",
+              "score": 0.09368635489810548,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 5.225205999977334,
+          "query_truncated": false
+        },
+        {
+          "id": "q10",
+          "question": "How soon does revoking an API token work?",
+          "relevant_passage_ids": [
+            "developer.md#p003"
+          ],
+          "results": [
+            {
+              "passage_id": "developer.md#p003",
+              "document": "developer.md",
+              "text": "API tokens can be revoked in developer settings. Revocation takes effect immediately; rotate credentials without committing secrets to source control.",
+              "score": 0.6723882517542576,
+              "rank": 1
+            },
+            {
+              "passage_id": "developer.md#p001",
+              "document": "developer.md",
+              "text": "API clients may send sixty requests per minute. A 429 response includes a Retry-After header with the wait time in seconds.",
+              "score": 0.45861463223558374,
+              "rank": 2
+            },
+            {
+              "passage_id": "billing.md#p002",
+              "document": "billing.md",
+              "text": "Cancelling a subscription stops renewal at the end of the current billing period. Existing access continues until that date.",
+              "score": 0.3626107010391137,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 4.356937000011385,
+          "query_truncated": false
+        },
+        {
+          "id": "q11",
+          "question": "How can I restore a backup without replacing my current work?",
+          "relevant_passage_ids": [
+            "data.md#p004"
+          ],
+          "results": [
+            {
+              "passage_id": "data.md#p004",
+              "document": "data.md",
+              "text": "Automatic backups run every night. Restore a backup into a new workspace to avoid overwriting existing documents.",
+              "score": 0.45028668758037216,
+              "rank": 1
+            },
+            {
+              "passage_id": "data.md#p003",
+              "document": "data.md",
+              "text": "Deleted documents stay in the trash for thirty days and can be restored by a workspace administrator.",
+              "score": 0.3403010959777479,
+              "rank": 2
+            },
+            {
+              "passage_id": "accounts.md#p002",
+              "document": "accounts.md",
+              "text": "Account recovery after losing a phone requires one of your saved backup codes. Support cannot bypass two-factor authentication.",
+              "score": 0.3192779335028788,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 3.6099769999964337,
+          "query_truncated": false
+        },
+        {
+          "id": "q12",
+          "question": "Can search read words inside a screenshot?",
+          "relevant_passage_ids": [
+            "workspace.md#p003"
+          ],
+          "results": [
+            {
+              "passage_id": "workspace.md#p003",
+              "document": "workspace.md",
+              "text": "Search finds words in document titles and body text. It does not search text embedded inside uploaded images.",
+              "score": 0.5883397202492754,
+              "rank": 1
+            },
+            {
+              "passage_id": "workspace.md#p001",
+              "document": "workspace.md",
+              "text": "Viewers may read and comment on documents. Editors may change content. Only administrators can invite members and manage billing.",
+              "score": 0.14305106589335764,
+              "rank": 2
+            },
+            {
+              "passage_id": "data.md#p001",
+              "document": "data.md",
+              "text": "Export a table as CSV from the table menu. The download contains all filtered rows, including rows on later pages.",
+              "score": 0.14145120594040278,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 2.910767000003034,
+          "query_truncated": false
+        },
+        {
+          "id": "q13",
+          "question": "If I cancel now, does access end immediately?",
+          "relevant_passage_ids": [
+            "billing.md#p002"
+          ],
+          "results": [
+            {
+              "passage_id": "billing.md#p002",
+              "document": "billing.md",
+              "text": "Cancelling a subscription stops renewal at the end of the current billing period. Existing access continues until that date.",
+              "score": 0.6522482769614149,
+              "rank": 1
+            },
+            {
+              "passage_id": "developer.md#p003",
+              "document": "developer.md",
+              "text": "API tokens can be revoked in developer settings. Revocation takes effect immediately; rotate credentials without committing secrets to source control.",
+              "score": 0.3073666859962492,
+              "rank": 2
+            },
+            {
+              "passage_id": "accounts.md#p001",
+              "document": "accounts.md",
+              "text": "Password reset links expire after fifteen minutes. Request a fresh email if the old link no longer works.",
+              "score": 0.2974162723295946,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 3.1391539999958695,
+          "query_truncated": false
+        },
+        {
+          "id": "q14",
+          "question": "What file encoding and size are accepted for table uploads?",
+          "relevant_passage_ids": [
+            "data.md#p002"
+          ],
+          "results": [
+            {
+              "passage_id": "data.md#p002",
+              "document": "data.md",
+              "text": "CSV imports must use UTF-8 encoding and a header row. File size is limited to ten megabytes.",
+              "score": 0.5224538983724678,
+              "rank": 1
+            },
+            {
+              "passage_id": "data.md#p001",
+              "document": "data.md",
+              "text": "Export a table as CSV from the table menu. The download contains all filtered rows, including rows on later pages.",
+              "score": 0.29402610986521693,
+              "rank": 2
+            },
+            {
+              "passage_id": "workspace.md#p003",
+              "document": "workspace.md",
+              "text": "Search finds words in document titles and body text. It does not search text embedded inside uploaded images.",
+              "score": 0.2212485131503346,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 2.9582470000377725,
+          "query_truncated": false
+        },
+        {
+          "id": "q15",
+          "question": "How do clients fetch the next hundred records?",
+          "relevant_passage_ids": [
+            "developer.md#p004"
+          ],
+          "results": [
+            {
+              "passage_id": "developer.md#p004",
+              "document": "developer.md",
+              "text": "Pagination uses a cursor returned as next_cursor. Continue until next_cursor is null. Each page holds at most one hundred items.",
+              "score": 0.47779495914890796,
+              "rank": 1
+            },
+            {
+              "passage_id": "developer.md#p001",
+              "document": "developer.md",
+              "text": "API clients may send sixty requests per minute. A 429 response includes a Retry-After header with the wait time in seconds.",
+              "score": 0.4348786050773493,
+              "rank": 2
+            },
+            {
+              "passage_id": "data.md#p001",
+              "document": "data.md",
+              "text": "Export a table as CSV from the table menu. The download contains all filtered rows, including rows on later pages.",
+              "score": 0.33648247783517826,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 2.8037399999902846,
+          "query_truncated": false
+        },
+        {
+          "id": "q16",
+          "question": "Do archived documents count against the free plan?",
+          "relevant_passage_ids": [
+            "billing.md#p003"
+          ],
+          "results": [
+            {
+              "passage_id": "billing.md#p003",
+              "document": "billing.md",
+              "text": "The free plan allows three members and five hundred documents per workspace. Archived documents count toward this limit.",
+              "score": 0.6894382527127663,
+              "rank": 1
+            },
+            {
+              "passage_id": "data.md#p003",
+              "document": "data.md",
+              "text": "Deleted documents stay in the trash for thirty days and can be restored by a workspace administrator.",
+              "score": 0.41557775600466956,
+              "rank": 2
+            },
+            {
+              "passage_id": "accounts.md#p004",
+              "document": "accounts.md",
+              "text": "Deleting an account permanently removes profile information after a thirty-day grace period. Workspace documents belong to the workspace.",
+              "score": 0.28038382911296567,
+              "rank": 3
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 2.891950000048382,
+          "query_truncated": false
+        }
+      ]
+    }
+  },
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.3.5",
+      "scikit-learn": "1.8.0",
+      "onnxruntime": "1.23.2",
+      "tokenizers": "0.22.1"
+    }
+  },
+  "protocol": "One warmup per method; single timed call per query including encoding, scoring and ranking. Nonpositive scores excluded."
+}

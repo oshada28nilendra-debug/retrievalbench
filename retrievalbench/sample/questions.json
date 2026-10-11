@@ -1,0 +1,119 @@
+{
+  "description": "Synthetic documentation and manually authored labels for demonstration; not a production benchmark. No tuning/test split.",
+  "corpus_sha256": "97f14b44ba7f69d8b554d615aa8e9100a8293ac91a68f7f316143df5c605031c",
+  "questions": [
+    {
+      "id": "q01",
+      "question": "How long is a password reset link valid?",
+      "relevant_passage_ids": [
+        "accounts.md#p001"
+      ]
+    },
+    {
+      "id": "q02",
+      "question": "I lost my authentication device. How can I get back in?",
+      "relevant_passage_ids": [
+        "accounts.md#p002"
+      ]
+    },
+    {
+      "id": "q03",
+      "question": "Can I retrieve a document I accidentally removed?",
+      "relevant_passage_ids": [
+        "data.md#p003"
+      ]
+    },
+    {
+      "id": "q04",
+      "question": "How do I avoid processing a webhook notification twice?",
+      "relevant_passage_ids": [
+        "developer.md#p002"
+      ]
+    },
+    {
+      "id": "q05",
+      "question": "What should my client do when it is throttled?",
+      "relevant_passage_ids": [
+        "developer.md#p001"
+      ]
+    },
+    {
+      "id": "q06",
+      "question": "Does a CSV download include records beyond the first page?",
+      "relevant_passage_ids": [
+        "data.md#p001"
+      ]
+    },
+    {
+      "id": "q07",
+      "question": "Which roles can invite people and download invoices?",
+      "relevant_passage_ids": [
+        "workspace.md#p001",
+        "billing.md#p001"
+      ]
+    },
+    {
+      "id": "q08",
+      "question": "Will my changes survive losing my internet connection?",
+      "relevant_passage_ids": [
+        "workspace.md#p002"
+      ]
+    },
+    {
+      "id": "q09",
+      "question": "Which chart format stays sharp when resized?",
+      "relevant_passage_ids": [
+        "workspace.md#p004"
+      ]
+    },
+    {
+      "id": "q10",
+      "question": "How soon does revoking an API token work?",
+      "relevant_passage_ids": [
+        "developer.md#p003"
+      ]
+    },
+    {
+      "id": "q11",
+      "question": "How can I restore a backup without replacing my current work?",
+      "relevant_passage_ids": [
+        "data.md#p004"
+      ]
+    },
+    {
+      "id": "q12",
+      "question": "Can search read words inside a screenshot?",
+      "relevant_passage_ids": [
+        "workspace.md#p003"
+      ]
+    },
+    {
+      "id": "q13",
+      "question": "If I cancel now, does access end immediately?",
+      "relevant_passage_ids": [
+        "billing.md#p002"
+      ]
+    },
+    {
+      "id": "q14",
+      "question": "What file encoding and size are accepted for table uploads?",
+      "relevant_passage_ids": [
+        "data.md#p002"
+      ]
+    },
+    {
+      "id": "q15",
+      "question": "How do clients fetch the next hundred records?",
+      "relevant_passage_ids": [
+        "developer.md#p004"
+      ]
+    },
+    {
+      "id": "q16",
+      "question": "Do archived documents count against the free plan?",
+      "relevant_passage_ids": [
+        "billing.md#p003"
+      ]
+    }
+  ]
+}

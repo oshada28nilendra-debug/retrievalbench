@@ -1,0 +1,862 @@
+{
+  "schema_version": 1,
+  "dataset_description": "Synthetic documentation and manually authored labels for demonstration; not a production benchmark. No tuning/test split.",
+  "k": 1,
+  "corpus_sha256": "97f14b44ba7f69d8b554d615aa8e9100a8293ac91a68f7f316143df5c605031c",
+  "questions_sha256": "bf0d73a5a3179a499e281d053cd69370be190ba526dcc01f1e96c6b1a31a4529",
+  "passage_count": 20,
+  "question_count": 16,
+  "warnings": [],
+  "methods": {
+    "tfidf": {
+      "summary": {
+        "recall_at_k": 0.46875,
+        "mrr_at_k": 0.5,
+        "hit_rate_at_k": 0.5
+      },
+      "timing": {
+        "load_ms": 0,
+        "index_ms": 2.139310999950794,
+        "warmup_ms": 0.44727900001362286,
+        "query_ms_median": 0.24175150002747614,
+        "query_ms_p95": 0.3342619999955332
+      },
+      "metadata": {
+        "ngram_range": [
+          1,
+          2
+        ],
+        "max_features": 20000,
+        "fitted_on": "corpus only"
+      },
+      "queries": [
+        {
+          "id": "q01",
+          "question": "How long is a password reset link valid?",
+          "relevant_passage_ids": [
+            "accounts.md#p001"
+          ],
+          "results": [
+            {
+              "passage_id": "accounts.md#p001",
+              "document": "accounts.md",
+              "text": "Password reset links expire after fifteen minutes. Request a fresh email if the old link no longer works.",
+              "score": 0.2977325197138013,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 0.3523789999917426,
+          "query_truncated": false
+        },
+        {
+          "id": "q02",
+          "question": "I lost my authentication device. How can I get back in?",
+          "relevant_passage_ids": [
+            "accounts.md#p002"
+          ],
+          "results": [
+            {
+              "passage_id": "data.md#p003",
+              "document": "data.md",
+              "text": "Deleted documents stay in the trash for thirty days and can be restored by a workspace administrator.",
+              "score": 0.12938127095387925,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 0.0,
+            "reciprocal_rank_at_k": 0.0,
+            "hit_at_k": 0,
+            "missed_relevant_ids": [
+              "accounts.md#p002"
+            ]
+          },
+          "latency_ms": 0.2931110000190529,
+          "query_truncated": false
+        },
+        {
+          "id": "q03",
+          "question": "Can I retrieve a document I accidentally removed?",
+          "relevant_passage_ids": [
+            "data.md#p003"
+          ],
+          "results": [
+            {
+              "passage_id": "workspace.md#p003",
+              "document": "workspace.md",
+              "text": "Search finds words in document titles and body text. It does not search text embedded inside uploaded images.",
+              "score": 0.13923493924717112,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 0.0,
+            "reciprocal_rank_at_k": 0.0,
+            "hit_at_k": 0,
+            "missed_relevant_ids": [
+              "data.md#p003"
+            ]
+          },
+          "latency_ms": 0.2456419999816717,
+          "query_truncated": false
+        },
+        {
+          "id": "q04",
+          "question": "How do I avoid processing a webhook notification twice?",
+          "relevant_passage_ids": [
+            "developer.md#p002"
+          ],
+          "results": [
+            {
+              "passage_id": "data.md#p004",
+              "document": "data.md",
+              "text": "Automatic backups run every night. Restore a backup into a new workspace to avoid overwriting existing documents.",
+              "score": 0.1928044025457377,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 0.0,
+            "reciprocal_rank_at_k": 0.0,
+            "hit_at_k": 0,
+            "missed_relevant_ids": [
+              "developer.md#p002"
+            ]
+          },
+          "latency_ms": 0.24028400002862327,
+          "query_truncated": false
+        },
+        {
+          "id": "q05",
+          "question": "What should my client do when it is throttled?",
+          "relevant_passage_ids": [
+            "developer.md#p001"
+          ],
+          "results": [
+            {
+              "passage_id": "workspace.md#p003",
+              "document": "workspace.md",
+              "text": "Search finds words in document titles and body text. It does not search text embedded inside uploaded images.",
+              "score": 0.10075316837024509,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 0.0,
+            "reciprocal_rank_at_k": 0.0,
+            "hit_at_k": 0,
+            "missed_relevant_ids": [
+              "developer.md#p001"
+            ]
+          },
+          "latency_ms": 0.2693870000030074,
+          "query_truncated": false
+        },
+        {
+          "id": "q06",
+          "question": "Does a CSV download include records beyond the first page?",
+          "relevant_passage_ids": [
+            "data.md#p001"
+          ],
+          "results": [
+            {
+              "passage_id": "data.md#p001",
+              "document": "data.md",
+              "text": "Export a table as CSV from the table menu. The download contains all filtered rows, including rows on later pages.",
+              "score": 0.17034580469040556,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 0.23950299998887203,
+          "query_truncated": false
+        },
+        {
+          "id": "q07",
+          "question": "Which roles can invite people and download invoices?",
+          "relevant_passage_ids": [
+            "workspace.md#p001",
+            "billing.md#p001"
+          ],
+          "results": [
+            {
+              "passage_id": "billing.md#p001",
+              "document": "billing.md",
+              "text": "Invoices are available under Settings, Billing. Only workspace administrators can download invoices or change payment information.",
+              "score": 0.3256978674193728,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 0.5,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": [
+              "workspace.md#p001"
+            ]
+          },
+          "latency_ms": 0.23568699998577358,
+          "query_truncated": false
+        },
+        {
+          "id": "q08",
+          "question": "Will my changes survive losing my internet connection?",
+          "relevant_passage_ids": [
+            "workspace.md#p002"
+          ],
+          "results": [
+            {
+              "passage_id": "accounts.md#p002",
+              "document": "accounts.md",
+              "text": "Account recovery after losing a phone requires one of your saved backup codes. Support cannot bypass two-factor authentication.",
+              "score": 0.12319549168489612,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 0.0,
+            "reciprocal_rank_at_k": 0.0,
+            "hit_at_k": 0,
+            "missed_relevant_ids": [
+              "workspace.md#p002"
+            ]
+          },
+          "latency_ms": 0.22139600002901716,
+          "query_truncated": false
+        },
+        {
+          "id": "q09",
+          "question": "Which chart format stays sharp when resized?",
+          "relevant_passage_ids": [
+            "workspace.md#p004"
+          ],
+          "results": [
+            {
+              "passage_id": "workspace.md#p002",
+              "document": "workspace.md",
+              "text": "Offline edits are saved locally and synchronized when the connection returns. Simultaneous edits to the same paragraph require manual conflict resolution.",
+              "score": 0.16140793180224852,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 0.0,
+            "reciprocal_rank_at_k": 0.0,
+            "hit_at_k": 0,
+            "missed_relevant_ids": [
+              "workspace.md#p004"
+            ]
+          },
+          "latency_ms": 0.3282229999967967,
+          "query_truncated": false
+        },
+        {
+          "id": "q10",
+          "question": "How soon does revoking an API token work?",
+          "relevant_passage_ids": [
+            "developer.md#p003"
+          ],
+          "results": [
+            {
+              "passage_id": "workspace.md#p003",
+              "document": "workspace.md",
+              "text": "Search finds words in document titles and body text. It does not search text embedded inside uploaded images.",
+              "score": 0.11060802425391764,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 0.0,
+            "reciprocal_rank_at_k": 0.0,
+            "hit_at_k": 0,
+            "missed_relevant_ids": [
+              "developer.md#p003"
+            ]
+          },
+          "latency_ms": 0.25199100002737396,
+          "query_truncated": false
+        },
+        {
+          "id": "q11",
+          "question": "How can I restore a backup without replacing my current work?",
+          "relevant_passage_ids": [
+            "data.md#p004"
+          ],
+          "results": [
+            {
+              "passage_id": "data.md#p004",
+              "document": "data.md",
+              "text": "Automatic backups run every night. Restore a backup into a new workspace to avoid overwriting existing documents.",
+              "score": 0.23387946843385693,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 0.23842099994908494,
+          "query_truncated": false
+        },
+        {
+          "id": "q12",
+          "question": "Can search read words inside a screenshot?",
+          "relevant_passage_ids": [
+            "workspace.md#p003"
+          ],
+          "results": [
+            {
+              "passage_id": "workspace.md#p003",
+              "document": "workspace.md",
+              "text": "Search finds words in document titles and body text. It does not search text embedded inside uploaded images.",
+              "score": 0.2936530201580284,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 0.22752500001388398,
+          "query_truncated": false
+        },
+        {
+          "id": "q13",
+          "question": "If I cancel now, does access end immediately?",
+          "relevant_passage_ids": [
+            "billing.md#p002"
+          ],
+          "results": [
+            {
+              "passage_id": "billing.md#p002",
+              "document": "billing.md",
+              "text": "Cancelling a subscription stops renewal at the end of the current billing period. Existing access continues until that date.",
+              "score": 0.1574584893070168,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 0.2994110000145156,
+          "query_truncated": false
+        },
+        {
+          "id": "q14",
+          "question": "What file encoding and size are accepted for table uploads?",
+          "relevant_passage_ids": [
+            "data.md#p002"
+          ],
+          "results": [
+            {
+              "passage_id": "data.md#p002",
+              "document": "data.md",
+              "text": "CSV imports must use UTF-8 encoding and a header row. File size is limited to ten megabytes.",
+              "score": 0.31454635145123744,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 0.243219000026329,
+          "query_truncated": false
+        },
+        {
+          "id": "q15",
+          "question": "How do clients fetch the next hundred records?",
+          "relevant_passage_ids": [
+            "developer.md#p004"
+          ],
+          "results": [
+            {
+              "passage_id": "developer.md#p001",
+              "document": "developer.md",
+              "text": "API clients may send sixty requests per minute. A 429 response includes a Retry-After header with the wait time in seconds.",
+              "score": 0.1488035073912237,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 0.0,
+            "reciprocal_rank_at_k": 0.0,
+            "hit_at_k": 0,
+            "missed_relevant_ids": [
+              "developer.md#p004"
+            ]
+          },
+          "latency_ms": 0.2312510000592738,
+          "query_truncated": false
+        },
+        {
+          "id": "q16",
+          "question": "Do archived documents count against the free plan?",
+          "relevant_passage_ids": [
+            "billing.md#p003"
+          ],
+          "results": [
+            {
+              "passage_id": "billing.md#p003",
+              "document": "billing.md",
+              "text": "The free plan allows three members and five hundred documents per workspace. Archived documents count toward this limit.",
+              "score": 0.5507778880462404,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 0.21892300003401033,
+          "query_truncated": false
+        }
+      ]
+    },
+    "minilm": {
+      "summary": {
+        "recall_at_k": 0.96875,
+        "mrr_at_k": 1.0,
+        "hit_rate_at_k": 1.0
+      },
+      "timing": {
+        "load_ms": 217.18137699997442,
+        "index_ms": 91.27821000004133,
+        "warmup_ms": 3.1714109999256834,
+        "query_ms_median": 3.460501500001101,
+        "query_ms_p95": 8.406792249985529
+      },
+      "metadata": {
+        "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+        "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+        "model_file": "onnx/model.onnx",
+        "max_tokens": 256,
+        "pooling": "attention-mask mean + L2",
+        "truncated_ids": [],
+        "provider": "CPUExecutionProvider"
+      },
+      "queries": [
+        {
+          "id": "q01",
+          "question": "How long is a password reset link valid?",
+          "relevant_passage_ids": [
+            "accounts.md#p001"
+          ],
+          "results": [
+            {
+              "passage_id": "accounts.md#p001",
+              "document": "accounts.md",
+              "text": "Password reset links expire after fifteen minutes. Request a fresh email if the old link no longer works.",
+              "score": 0.7410027010486236,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 2.8413150000687892,
+          "query_truncated": false
+        },
+        {
+          "id": "q02",
+          "question": "I lost my authentication device. How can I get back in?",
+          "relevant_passage_ids": [
+            "accounts.md#p002"
+          ],
+          "results": [
+            {
+              "passage_id": "accounts.md#p002",
+              "document": "accounts.md",
+              "text": "Account recovery after losing a phone requires one of your saved backup codes. Support cannot bypass two-factor authentication.",
+              "score": 0.5211689966992954,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 3.2372680000207765,
+          "query_truncated": false
+        },
+        {
+          "id": "q03",
+          "question": "Can I retrieve a document I accidentally removed?",
+          "relevant_passage_ids": [
+            "data.md#p003"
+          ],
+          "results": [
+            {
+              "passage_id": "data.md#p003",
+              "document": "data.md",
+              "text": "Deleted documents stay in the trash for thirty days and can be restored by a workspace administrator.",
+              "score": 0.6122995763383291,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 2.8083969999670444,
+          "query_truncated": false
+        },
+        {
+          "id": "q04",
+          "question": "How do I avoid processing a webhook notification twice?",
+          "relevant_passage_ids": [
+            "developer.md#p002"
+          ],
+          "results": [
+            {
+              "passage_id": "developer.md#p002",
+              "document": "developer.md",
+              "text": "Webhooks are retried after one minute, then five minutes, then thirty minutes. Use the event ID as an idempotency key.",
+              "score": 0.6372205857126997,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 3.9121609999028806,
+          "query_truncated": false
+        },
+        {
+          "id": "q05",
+          "question": "What should my client do when it is throttled?",
+          "relevant_passage_ids": [
+            "developer.md#p001"
+          ],
+          "results": [
+            {
+              "passage_id": "developer.md#p001",
+              "document": "developer.md",
+              "text": "API clients may send sixty requests per minute. A 429 response includes a Retry-After header with the wait time in seconds.",
+              "score": 0.39274458422128916,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 3.487436999989768,
+          "query_truncated": false
+        },
+        {
+          "id": "q06",
+          "question": "Does a CSV download include records beyond the first page?",
+          "relevant_passage_ids": [
+            "data.md#p001"
+          ],
+          "results": [
+            {
+              "passage_id": "data.md#p001",
+              "document": "data.md",
+              "text": "Export a table as CSV from the table menu. The download contains all filtered rows, including rows on later pages.",
+              "score": 0.646978135948802,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 3.485854000018662,
+          "query_truncated": false
+        },
+        {
+          "id": "q07",
+          "question": "Which roles can invite people and download invoices?",
+          "relevant_passage_ids": [
+            "workspace.md#p001",
+            "billing.md#p001"
+          ],
+          "results": [
+            {
+              "passage_id": "billing.md#p001",
+              "document": "billing.md",
+              "text": "Invoices are available under Settings, Billing. Only workspace administrators can download invoices or change payment information.",
+              "score": 0.565990608819466,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 0.5,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": [
+              "workspace.md#p001"
+            ]
+          },
+          "latency_ms": 3.4351489999835394,
+          "query_truncated": false
+        },
+        {
+          "id": "q08",
+          "question": "Will my changes survive losing my internet connection?",
+          "relevant_passage_ids": [
+            "workspace.md#p002"
+          ],
+          "results": [
+            {
+              "passage_id": "workspace.md#p002",
+              "document": "workspace.md",
+              "text": "Offline edits are saved locally and synchronized when the connection returns. Simultaneous edits to the same paragraph require manual conflict resolution.",
+              "score": 0.37631418336019096,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 2.7476069999465835,
+          "query_truncated": false
+        },
+        {
+          "id": "q09",
+          "question": "Which chart format stays sharp when resized?",
+          "relevant_passage_ids": [
+            "workspace.md#p004"
+          ],
+          "results": [
+            {
+              "passage_id": "workspace.md#p004",
+              "document": "workspace.md",
+              "text": "Charts support SVG and PNG downloads. Choose SVG for scalable vector graphics in presentations.",
+              "score": 0.43006102583345346,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 2.798461999987012,
+          "query_truncated": false
+        },
+        {
+          "id": "q10",
+          "question": "How soon does revoking an API token work?",
+          "relevant_passage_ids": [
+            "developer.md#p003"
+          ],
+          "results": [
+            {
+              "passage_id": "developer.md#p003",
+              "document": "developer.md",
+              "text": "API tokens can be revoked in developer settings. Revocation takes effect immediately; rotate credentials without committing secrets to source control.",
+              "score": 0.6723882517542576,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 3.155096999989837,
+          "query_truncated": false
+        },
+        {
+          "id": "q11",
+          "question": "How can I restore a backup without replacing my current work?",
+          "relevant_passage_ids": [
+            "data.md#p004"
+          ],
+          "results": [
+            {
+              "passage_id": "data.md#p004",
+              "document": "data.md",
+              "text": "Automatic backups run every night. Restore a backup into a new workspace to avoid overwriting existing documents.",
+              "score": 0.45028668758037216,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 3.5496279999733815,
+          "query_truncated": false
+        },
+        {
+          "id": "q12",
+          "question": "Can search read words inside a screenshot?",
+          "relevant_passage_ids": [
+            "workspace.md#p003"
+          ],
+          "results": [
+            {
+              "passage_id": "workspace.md#p003",
+              "document": "workspace.md",
+              "text": "Search finds words in document titles and body text. It does not search text embedded inside uploaded images.",
+              "score": 0.5883397202492754,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 8.3753459999798,
+          "query_truncated": false
+        },
+        {
+          "id": "q13",
+          "question": "If I cancel now, does access end immediately?",
+          "relevant_passage_ids": [
+            "billing.md#p002"
+          ],
+          "results": [
+            {
+              "passage_id": "billing.md#p002",
+              "document": "billing.md",
+              "text": "Cancelling a subscription stops renewal at the end of the current billing period. Existing access continues until that date.",
+              "score": 0.6522482769614149,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 3.7844340000674492,
+          "query_truncated": false
+        },
+        {
+          "id": "q14",
+          "question": "What file encoding and size are accepted for table uploads?",
+          "relevant_passage_ids": [
+            "data.md#p002"
+          ],
+          "results": [
+            {
+              "passage_id": "data.md#p002",
+              "document": "data.md",
+              "text": "CSV imports must use UTF-8 encoding and a header row. File size is limited to ten megabytes.",
+              "score": 0.5224538983724678,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 3.3681410000099277,
+          "query_truncated": false
+        },
+        {
+          "id": "q15",
+          "question": "How do clients fetch the next hundred records?",
+          "relevant_passage_ids": [
+            "developer.md#p004"
+          ],
+          "results": [
+            {
+              "passage_id": "developer.md#p004",
+              "document": "developer.md",
+              "text": "Pagination uses a cursor returned as next_cursor. Continue until next_cursor is null. Each page holds at most one hundred items.",
+              "score": 0.47779495914890796,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 8.501131000002715,
+          "query_truncated": false
+        },
+        {
+          "id": "q16",
+          "question": "Do archived documents count against the free plan?",
+          "relevant_passage_ids": [
+            "billing.md#p003"
+          ],
+          "results": [
+            {
+              "passage_id": "billing.md#p003",
+              "document": "billing.md",
+              "text": "The free plan allows three members and five hundred documents per workspace. Archived documents count toward this limit.",
+              "score": 0.6894382527127663,
+              "rank": 1
+            }
+          ],
+          "metrics": {
+            "recall_at_k": 1.0,
+            "reciprocal_rank_at_k": 1.0,
+            "hit_at_k": 1,
+            "missed_relevant_ids": []
+          },
+          "latency_ms": 5.837968999912846,
+          "query_truncated": false
+        }
+      ]
+    }
+  },
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.3.5",
+      "scikit-learn": "1.8.0",
+      "onnxruntime": "1.23.2",
+      "tokenizers": "0.22.1"
+    }
+  },
+  "protocol": "One warmup per method; single timed call per query including encoding, scoring and ranking. Nonpositive scores excluded."
+}
