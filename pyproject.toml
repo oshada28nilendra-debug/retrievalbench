@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "retrievalbench"
+version = "0.1.0"
+description = "Local passage retrieval comparisons with honest per-query evaluation"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26,<3","scikit-learn>=1.5,<2","flask==3.1.2","onnxruntime==1.23.2","tokenizers==0.22.1","huggingface-hub==0.36.0"]
+[project.optional-dependencies]
+dev = ["pytest==8.4.2"]
+[project.scripts]
+retrievalbench = "retrievalbench.cli:main"
+[tool.setuptools.packages.find]
+include = ["retrievalbench*"]
+[tool.setuptools.package-data]
+retrievalbench = ["templates/*.html","static/*.css","static/*.js","sample/*.json","sample/documents/*.md"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["model: requires real MiniLM model assets"]
